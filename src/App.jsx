@@ -25,7 +25,7 @@ export default function App() {
         {tab === 'main' && (
           <div>
              <Section/> 
-             <ButtonSection/> 
+             {/* <ButtonSection/>  */}
             <ApiData/>
           </div>
         )}
