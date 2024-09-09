@@ -11,6 +11,11 @@
 .button:hover{
     opacity: 0.8;
 }
+
+.button:disabled{
+    cursor: not-allowed;
+}
+
 .button:focus{
     background-color: #3e6ae1;
     color: #ffffff
