@@ -7,10 +7,11 @@ import TabsSection from "./components/TabsSection.jsx"
 import FeedBackSection from "./components/FeedBackSection.jsx"
 import ApiData from "./components/ApiData.jsx"
 import '../src/index.css'
+import EffectSection from "./components/EffectSection.jsx"
 
 export default function App() {
 
-  const [tab, setTab] = useState('main')
+  const [tab, setTab] = useState('effect')
 
 
   return (
@@ -30,14 +31,9 @@ export default function App() {
           </div>
         )}
 
-        {tab === 'feedback' &&(
-          <>
-            <FeedBackSection/>
-            
-          </>
-        )}
+        {tab === 'feedback' && <FeedBackSection/>}
 
-        
+        {tab === 'effect' && <EffectSection/>}
       </main>
       </container>
     </Fragment>
