@@ -9,9 +9,9 @@ import '../index.css'
 export default function FeedBackSection(){
     const { register, handleSubmit,formState:{ errors } } = useForm({
         mode: "onChange",
-        defaultValues:{
-            'name': 'Я'
-        }
+        // defaultValues:{
+        //     'name': 'Я'
+        // }
     });
 
     const onSubmit = data =>{
@@ -25,19 +25,19 @@ export default function FeedBackSection(){
             <h3>Обратная связь</h3>
 
 
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div>
-                    <input {...register('name', { required: 'Надо заполнить', })} placeholder="Ваше имя" />
-                    {errors.name && <p>{errors.name.message}</p>}
+            <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                <div className="div_form">
+                    <input {...register('name', { required: 'Необходимо заполнить', })} placeholder="Ваше имя" />
+                    {errors.name && <p className="p_form">{errors.name.message}</p>}
                 </div>
 
-                <div>
+                <div className="div_form">
                     <input {...register('email', { required: true })} placeholder="Ваш email" />
-                    {errors.email && <p>Это поле обязательно для заполнения</p>}
+                    {errors.email && <p className="p_form">Это поле обязательно для заполнения</p>}
                 </div>
-                <div>
+                <div className="div_form">
                     <textarea {...register('message', { required: true })} placeholder="Ваше сообщение" />
-                    {errors.message && <p>Это поле обязательно для заполнения</p>}
+                    {errors.message && <p className="p_form">Это поле обязательно для заполнения</p>}
                 </div>
                 <Button type="submit">Отправить</Button>
             </form>
