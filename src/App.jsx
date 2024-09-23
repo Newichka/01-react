@@ -11,7 +11,7 @@ import EffectSection from "./components/EffectSection.jsx"
 
 export default function App() {
 
-  const [tab, setTab] = useState('effect')
+  const [tab, setTab] = useState('feedback')
 
 
   return (
